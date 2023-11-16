@@ -148,8 +148,9 @@
                         alert(`Computer move is ${movecomputer()}. `+'Result : Tie')
                         score.tie+=1;
                     }
-                    localStorage.setItem('score', JSON.stringify(score));
+                    
                 }
+                localStorage.setItem('score', JSON.stringify(score));
 
             }
         </script>
