@@ -59,6 +59,13 @@
                 font-weight: 600;
                 text-align: center;
                 color: chocolate;
+                
+            }
+
+            .info{
+                font-size:20px;
+                color:rgb(83, 24, 24);
+                margin-top: 80px;
             }
 
 
@@ -84,7 +91,7 @@
         
         <div class="Results-list">
             <button class="Score-button" onclick="console.log(score);
-                alert('Look at the console');">Score</button>
+                alert(`Score: wins: ${score.win} , losses: ${score.lose} , ties: ${score.tie} .`)">Score</button>
 
             <button class="Reset-button" onclick="
                 score.win = 0;
@@ -93,6 +100,8 @@
                 localStorage.removeItem('score');
             ">Reset Score</button>
         </div>
+
+        <p class="info">If you want ot find more, go to my profile: <a href="https://github.com/Ibrohim2011" target="_blank">github.com/Ibrohim2011</a></p>
 
         
 
@@ -148,10 +157,9 @@
                         alert(`Computer move is ${movecomputer()}. `+'Result : Tie')
                         score.tie+=1;
                     }
-                    
+                
                 }
                 localStorage.setItem('score', JSON.stringify(score));
-
             }
         </script>
     </body>
